@@ -45,6 +45,12 @@ module.exports = (robot) ->
   robot.respond /(GOOD NEWS EVERYONE[,.!]?) (.*)/i, (msg) ->
     memeGenerator msg, 1591, 112464, msg.match[1], msg.match[2], (url) ->
       msg.send url
+      
+  robot.respond /false (.+)/i, (msg) ->
+    caption = msg.match[1] || ""
+
+    memeGenerator msg, 59488, 1428077, "FALSE", caption, (url) ->
+      msg.send url      
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
   username = process.env.HUBOT_MEMEGEN_USERNAME
