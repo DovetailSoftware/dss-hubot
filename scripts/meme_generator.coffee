@@ -14,6 +14,10 @@
 # <text> TOO DAMN <high> - Generates THE RENT IS TOO DAMN HIGH guy
 #
 # Good news everyone! <news> - Generates Professor Farnsworth
+#
+# false <text> - Generates False Guy meme (Dwight from The Office)
+#
+# NOPE! <text> - Generates Chuck Testa meme
 
 module.exports = (robot) ->
   robot.respond /Y U NO (.+)/i, (msg) ->
@@ -50,7 +54,13 @@ module.exports = (robot) ->
     caption = msg.match[1] || ""
 
     memeGenerator msg, 59488, 1428077, "FALSE", caption, (url) ->
-      msg.send url      
+      msg.send url  
+      
+  robot.respond /(.+) NOPE!/i, (msg) ->
+    caption = msg.match[1] || ""
+
+    memeGenerator msg, 312584, 1964009, caption, "NOPE! Chuck Testa", (url) ->
+      msg.send url
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
   username = process.env.HUBOT_MEMEGEN_USERNAME
