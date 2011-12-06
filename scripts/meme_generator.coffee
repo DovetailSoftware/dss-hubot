@@ -17,7 +17,7 @@
 #
 # false <text> - Generates False Guy meme (Dwight from The Office)
 #
-# NOPE! <text> - Generates Chuck Testa meme
+# <text> NOPE! - Generates Chuck Testa meme
 
 module.exports = (robot) ->
   robot.respond /Y U NO (.+)/i, (msg) ->
