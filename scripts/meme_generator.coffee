@@ -18,6 +18,8 @@
 # false <text> - Generates False Guy meme (Dwight from The Office)
 #
 # <text> NOPE! - Generates Chuck Testa meme
+#
+# <text> -Rick Perry - Generates Rick Perry Unpopular Opinions Meme
 
 module.exports = (robot) ->
   robot.respond /Y U NO (.+)/i, (msg) ->
@@ -60,6 +62,10 @@ module.exports = (robot) ->
     caption = msg.match[1] || ""
 
     memeGenerator msg, 312584, 1964009, caption, "NOPE! Chuck Testa", (url) ->
+      msg.send url
+      
+  robot.respond /(.+) -\s?Rick Perry/i, (msg) ->
+    memeGenerator msg, 351006, 2085783, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
