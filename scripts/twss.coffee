@@ -7,4 +7,4 @@ module.exports = (robot) ->
     msg.send "THAT'S WHAT SHE SAID!"
 
   robot.respond /.*just the tip.*/i, (msg) ->
-    msg.send "You're just really wondering are we gonna get hopped up enough to make some bad decisions? Perhaps play a little game called "just the tip". Just for a second, just to see how it feels. Or, ouch, ouch you're on my hair."
+    msg.send "You're just really wondering are we gonna get hopped up enough to make some bad decisions? Perhaps play a little game called \"just the tip\". Just for a second, just to see how it feels. Or, ouch, ouch you're on my hair."
