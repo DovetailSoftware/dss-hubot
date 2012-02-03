@@ -71,7 +71,7 @@ module.exports = (robot) ->
       msg.send url
       
   robot.respond /(brace|prepare) yoursel(f|ves),?\s*(.*)/i, (msg) ->
-    memeGenerator msg, 121854, 1611300, msg.match[1] + "yoursel" + msg.match[2], msg.match[3], (url) ->
+    memeGenerator msg, 121854, 1611300, msg.match[1] + " yoursel" + msg.match[2], msg.match[3], (url) ->
       msg.send url      
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
