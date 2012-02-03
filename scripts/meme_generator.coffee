@@ -20,6 +20,8 @@
 # <text> NOPE! - Generates Chuck Testa meme
 #
 # <text> -Rick Perry - Generates Rick Perry Unpopular Opinions Meme
+#
+# (brace|prepare) yourselves, <text> - Sean Bean meme (Brace yourselves, the x are coming)
 
 module.exports = (robot) ->
   robot.respond /Y U NO (.+)/i, (msg) ->
@@ -67,6 +69,10 @@ module.exports = (robot) ->
   robot.respond /(.+) -\s?Rick Perry/i, (msg) ->
     memeGenerator msg, 351006, 2085783, msg.match[1], msg.match[2], (url) ->
       msg.send url
+      
+  robot.respond /(brace|prepare) yoursel(f|ves),?\s*(.*)/i, (msg) ->
+    memeGenerator msg, 121854, 1611300, msg.match[1] + "yoursel" + msg.match[2], msg.match[3], (url) ->
+      msg.send url      
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
   username = process.env.HUBOT_MEMEGEN_USERNAME
