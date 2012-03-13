@@ -3,4 +3,5 @@
 
 module.exports = (robot) ->
   robot.hear /#(\d+)/i, (msg) ->
-    msg.send "https://github.com/DovetailSoftware/blue/issues/" + msg.match[1]
+    if msg.user.room == "Blue"
+      msg.send "https://github.com/DovetailSoftware/blue/issues/" + msg.match[1]
