@@ -1,5 +1,6 @@
-# Link to a Github Issue in the Blue repository when
-#   someone mentions an issue number (#999)
+#
+# #999 - Link to a Github Issue in the Blue repository when someone mentions an issue number (only works in the 'Blue' room)
+#
 
 String::strip = -> if String::trim? then @trim() else @replace /^\s+|\s+$/g, ""
 

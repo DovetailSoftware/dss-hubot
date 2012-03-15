@@ -1,4 +1,6 @@
-# NOPE, CHUCK TESTA
+#
+# NOPE - Chuck Testa!
+# 
 
 module.exports = (robot) ->
   robot.hear /^(?!hubot).*?NOPE!/i, (msg) ->

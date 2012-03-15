@@ -1,6 +1,7 @@
-# Allows Hubot to give a look of disapproval. 
+# Allows Hubot to give the balls of disapproval. 
 #
-# lod <name> - gives back the character for the look of disapproval, optionally @name.
+# bod <name> - gives back the character for the balls of disapproval, optionally @name.
+#
 
 module.exports = (robot) ->
   robot.respond /bod\s?(.*)/i, (msg) ->

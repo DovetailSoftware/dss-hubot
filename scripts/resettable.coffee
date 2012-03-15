@@ -1,4 +1,6 @@
-# Flip a table
+#
+# calm down - resets a flipped table
+#
 
 module.exports = (robot) ->
   robot.hear /\s?calm down/i, (msg) ->
