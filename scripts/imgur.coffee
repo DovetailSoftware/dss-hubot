@@ -4,8 +4,8 @@
 #
 module.exports = (robot) ->
   robot.hear /imgur.com\/gallery\/(.*)/i, (msg) ->
-    msg.send "Hubot getting " + msg.match[0] + ".json"
-    msg.http(msg.match[0] + ".json")
+
+    msg.http("http://" + msg.match[0] + ".json")
       .get() (err, res, body) ->
          gallery = JSON.parse(body).gallery
          image = gallery.image
