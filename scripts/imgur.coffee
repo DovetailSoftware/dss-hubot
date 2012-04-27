@@ -14,6 +14,5 @@ module.exports = (robot) ->
          title = image.title
          caption = captions[0].caption       
         
-         msg.send "Title: " + title 
-         msg.send "Top caption: " + caption
+         msg.send "Title: " + title + "\nTop caption: " + caption
          msg.send "http://i.imgur.com/" + image.hash + ".png"
