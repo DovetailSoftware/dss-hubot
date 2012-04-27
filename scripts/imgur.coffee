@@ -4,4 +4,16 @@
 #
 module.exports = (robot) ->
   robot.hear /imgur.com\/gallery\/(.*)/i, (msg) ->
-    msg.send "http://i.imgur.com/" + msg.match[1] + ".png"
+     
+    msg.http(msg.match[0] + ".json")
+      .get()(err, res, body) ->
+         gallery = JSON.parse(body).gallery
+         image = gallery.image
+         captions = gallery.captions
+         
+         title = image.title
+         caption = captions[0].caption       
+        
+         msg.send "Title: " + title 
+         msg.send "Top caption: " + caption
+         msg.send "http://i.imgur.com/" + image.hash + ".png"
