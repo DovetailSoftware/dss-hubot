@@ -6,7 +6,7 @@ module.exports = (robot) ->
   robot.hear /imgur.com\/gallery\/(.*)/i, (msg) ->
      
     msg.http(msg.match[0] + ".json")
-      .get()(err, res, body) ->
+      .get() (err, res, body) ->
          gallery = JSON.parse(body).gallery
          image = gallery.image
          captions = gallery.captions
