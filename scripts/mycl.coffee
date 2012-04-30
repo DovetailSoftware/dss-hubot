@@ -2,7 +2,7 @@
 #
 #
 module.exports = (robot) ->
-  robot.hear /my\.cl\/(?!items)(.*)/i, (msg) ->
+  robot.hear /cl\.ly\/(?!items)(.*)/i, (msg) ->
 
     msg.http("http://#{msg.match[0]}")
       .get() (err, res, body) ->
