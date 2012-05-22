@@ -21,6 +21,8 @@
 #
 # <text> -Rick Perry - Generates Rick Perry Unpopular Opinions Meme
 #
+# angry dad: <text>, <text> - Generates angry dad meme
+#
 # (brace|prepare) yourselves, <text> - Sean Bean meme (Brace yourselves, the x are coming)
 
 module.exports = (robot) ->
@@ -49,6 +51,10 @@ module.exports = (robot) ->
   robot.respond /(.*) (\w+\sTOO DAMN .*)/i, (msg) ->
     memeGenerator msg, 998, 203665, msg.match[1], msg.match[2], (url) ->
       msg.send url
+	  
+  robot.respond /angry dad: (.*),(.*)/i, (msg) ->
+	memeGenerator msg, 111, 1436, msg.match[1], msg.match[2], (url) ->
+	  msg.send url
 
   robot.respond /(GOOD NEWS EVERYONE[,.!]?) (.*)/i, (msg) ->
     memeGenerator msg, 1591, 112464, msg.match[1], msg.match[2], (url) ->
