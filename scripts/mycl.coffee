@@ -2,7 +2,7 @@
 #
 #
 module.exports = (robot) ->
-  robot.hear /cl\.ly\/(?!items)(.*)/i, (msg) ->
+  robot.hear /:\/\/cl\.ly\/(?!items)(.*)/i, (msg) ->
 
     msg.http("http://#{msg.match[0]}")
       .headers(Accept: "application/json")
