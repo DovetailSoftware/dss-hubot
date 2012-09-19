@@ -14,6 +14,6 @@ module.exports = (robot) ->
   robot.hear /\bOP\b/, (msg) ->
     msg.send "OP OP OP OP OPPA GANGNAM STYLE!"
     msg.send "http://media.tumblr.com/tumblr_m8131c4GoH1qgbs8d.gif"
-  robot.hear /\bHE{1,9}Y{1,9} SEX{1,9}Y LADY\b/i, (msg) ->
+  robot.hear /\bHE{1,9}Y{1,9} SE{1,9}X{1,9}Y{1,9} LA{1,9}D{1,9}Y{1,9}\b/i, (msg) ->
     msg.send "OP OP OP OP OPPA GANGNAM STYLE!"
     msg.send "http://25.media.tumblr.com/tumblr_m79ye0Z8Hj1rynutdo1_500.gif"
