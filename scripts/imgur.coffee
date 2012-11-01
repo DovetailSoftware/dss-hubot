@@ -7,7 +7,7 @@ module.exports = (robot) ->
 
     msg.http("http://" + msg.match[0] + ".json")
       .get() (err, res, body) ->
-         gallery = JSON.parse(body).gallery
+         gallery = JSON.parse(body).data
          image = gallery.image
          captions = gallery.captions
          
