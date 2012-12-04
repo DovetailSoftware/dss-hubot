@@ -4,4 +4,4 @@
 
 module.exports = (robot) ->
   robot.respond /where am i\?/i, (msg) ->
-    msg.send "[#{msg.message.user.room}]"
+    msg.send "You are [#{msg.message.user.name}] in room ID [#{msg.message.user.room}]"
