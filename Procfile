@@ -1,1 +1,1 @@
-web: bin/hubot --adapter hipchat --name ChadMyers
+web: bin/hubot --adapter hipchat 
