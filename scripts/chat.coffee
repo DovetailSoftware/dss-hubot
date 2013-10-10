@@ -5,4 +5,4 @@
 module.exports = (robot) ->
   robot.hear /^(?!hubot).*?chat/i, (msg) ->
     if msg.message.user.room != "agent_5" #the Blue room
-      msg.send "https://dovetailsw.campfirenow.com/room/174744/uploads/3399095/chaaaaat.jpg"
+      msg.send "https://s3.amazonaws.com/uploads.hipchat.com/51236/346791/qwzoo31w7vvdt5l/chaaaaat.jpg"
